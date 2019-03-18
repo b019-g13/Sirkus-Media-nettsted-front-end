@@ -5,9 +5,9 @@ class HeaderComponent extends React.Component {
     return (
       <React.Fragment>
         <h1>
-          <span>{this.props.headline}</span>
+          <span>{this.props.h1}</span>
         </h1>
-        <p>{this.props.paragraph}</p>
+        <p>{this.props.p}</p>
       </React.Fragment>
     );
   }
