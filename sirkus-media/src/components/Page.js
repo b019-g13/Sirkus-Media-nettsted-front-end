@@ -40,7 +40,16 @@ class Page extends React.Component {
         const AllComponentsName = slug;
         if (pageComponentsName === AllComponentsName) {
           const Comp = AllComponents[slug];
+          let componentFields = {};
+
+          // Looper gjennom alle fields/props til komponenten
+          for (let field = 0; field < pageComponent.fields.length; field++) {
+            const slug = pageComponent.fields[field].slug;
+            const value = pageComponent.fields[field].value;
+
+            componentFields[slug] = value;
         }
+
       });
     });
   }
