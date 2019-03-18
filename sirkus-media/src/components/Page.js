@@ -48,8 +48,11 @@ class Page extends React.Component {
             const value = pageComponent.fields[field].value;
 
             componentFields[slug] = value;
-        }
+          }
 
+          // Gjør setter alle fields i komponenten som props
+          return <Comp {...componentFields} key={i} />;
+        }
       });
     });
   }
