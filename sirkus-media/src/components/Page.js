@@ -31,8 +31,12 @@ class Page extends React.Component {
       app: App
     };
 
+    // Looper igjennom komponentene til siden
     return this.state.pageComponents.map(function(pageComponent, i) {
       const pageComponentsName = pageComponent.slug;
+
+      // Looper igjennom alle de definerte komponentene
+      return Object.keys(AllComponents).map(function(slug) {
     });
   }
 }
