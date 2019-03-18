@@ -37,6 +37,11 @@ class Page extends React.Component {
 
       // Looper igjennom alle de definerte komponentene
       return Object.keys(AllComponents).map(function(slug) {
+        const AllComponentsName = slug;
+        if (pageComponentsName === AllComponentsName) {
+          const Comp = AllComponents[slug];
+        }
+      });
     });
   }
 }
