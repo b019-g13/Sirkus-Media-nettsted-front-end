@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import HeaderComponent from "./Header";
+import App from "../App";
 
 class Page extends React.Component {
   componentWillMount() {
