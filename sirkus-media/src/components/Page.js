@@ -31,7 +31,14 @@ class Page extends React.Component {
   }
 
   render() {
-    let comps = this.comps;
+    // Definerer alle komponenter
+    const AllComponents = {
+      headercomponent: HeaderComponent,
+      actionbox: HeaderComponent,
+      gridonethird: HeaderComponent,
+      app: App
+    };
+
     return this.state.pageComponents.map(function(pageComponent, i) {
       const names = { name: pageComponent.name };
     });
