@@ -24,20 +24,30 @@ class Router extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          {this.state.pages.map(function(page, i) {
-            return (
-              <Route
-                key={i}
-                exact
-                path={"/" + page.id}
-                render={props => <PageComponent {...props} page={page} />}
-              />
-            );
-          })}
-        </Switch>
-      </BrowserRouter>
+      <React.Fragment>
+        {this.state.pages.map(function(page, i) {
+          return (
+            <div key={i}>
+              <a href={"/" + page.id}>{page.title}</a>
+            </div>
+          );
+        })}
+
+        <BrowserRouter>
+          <Switch>
+            {this.state.pages.map(function(page, i) {
+              return (
+                <Route
+                  key={i}
+                  exact
+                  path={"/" + page.id}
+                  render={props => <PageComponent {...props} page={page} />}
+                />
+              );
+            })}
+          </Switch>
+        </BrowserRouter>
+      </React.Fragment>
     );
   }
 }
