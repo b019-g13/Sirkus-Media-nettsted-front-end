@@ -3,8 +3,9 @@ $background-main: #2b91d9;
 $background-second: #2bd9cb;
 
 .header {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(
     135deg,
     $background-main,
@@ -12,12 +13,15 @@ $background-second: #2bd9cb;
   );
   padding: 150px 0;
 
-  @media screen and (max-width: 768px) {
-    padding: 50px 0;
+  &-left,
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   &-left {
-    grid-column: 4/10;
+    max-width: 30%;
     h1,
     p {
       color: white;
@@ -25,6 +29,8 @@ $background-second: #2bd9cb;
 
     h1 {
       font-size: 4em;
+      overflow-wrap: break-word;
+      margin: 0;
     }
 
     p,
@@ -38,15 +44,17 @@ $background-second: #2bd9cb;
       padding: 20px 30px;
       color: white;
     }
-
-    @media screen and (max-width: 768px) {
-      grid-column: 2/12;
-    }
   }
 
   &-right {
-    @media screen and (max-width: 768px) {
-      grid-column: 1/13;
+    max-width: 100%;
+    img {
+      width: 100%;
+      max-width: 1920px;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
   }
 }
