@@ -54,7 +54,16 @@ $background-second: #2bd9cb;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    padding: 75px 0;
+    flex-direction: column;
+
+    &-left {
+      max-width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 411px) {
     padding: 50px 0;
   }
 }
