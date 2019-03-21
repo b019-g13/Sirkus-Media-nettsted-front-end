@@ -28,7 +28,7 @@ $background-second: #2bd9cb;
     }
 
     h1 {
-      font-size: 4em;
+      font-size: 4rem;
       overflow-wrap: break-word;
       margin: 0;
     }
@@ -60,6 +60,12 @@ $background-second: #2bd9cb;
 
     &-left {
       max-width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+      word-break: break-all;
     }
   }
 
