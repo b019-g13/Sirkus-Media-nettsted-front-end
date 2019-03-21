@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-import HeaderComponent from "./Header";
+import HeaderComponent from "./header/Header";
 import App from "../App";
 
 class Page extends React.Component {
@@ -25,10 +25,7 @@ class Page extends React.Component {
   render() {
     // Definerer alle komponenter
     const AllComponents = {
-      headercomponent: HeaderComponent,
-      actionbox: HeaderComponent,
-      gridonethird: HeaderComponent,
-      app: App
+      headercomponent: HeaderComponent
     };
 
     // Looper igjennom komponentene til siden
