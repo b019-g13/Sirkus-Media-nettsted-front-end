@@ -70,11 +70,15 @@ $background-second: #2bd9cb;
 
   @media screen and (max-width: 1024px) {
     h1 {
-      word-break: break-all;
+      word-break: break-word;
     }
   }
 
   @media screen and (max-width: 411px) {
     padding: 50px 0;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 }
