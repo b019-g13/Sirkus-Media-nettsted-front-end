@@ -45,6 +45,9 @@ $background-second: #2bd9cb;
       border: none;
       padding: 20px 30px;
       color: white;
+      text-transform: uppercase;
+      border-radius: 4px;
+      box-shadow: 0px 10px 30px -10px darken($accent, 5%);
     }
   }
 
