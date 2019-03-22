@@ -9,7 +9,10 @@ class HeaderComponent extends React.Component {
           <h1>{this.props.h1}</h1>
           <p>{this.props.headerText}</p>
           <button>{this.props.headerButton}</button>
-          <p>{this.props.headerContactText}</p>
+          <section className="header-contact-info">
+            <p>{this.props.headerContactText}</p>
+            <p className="contact-number">{this.props.headerContactNumber}</p>
+          </section>
         </section>
         <section className="header-right">
           <img
