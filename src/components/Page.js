@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import HeaderComponent from "./header/Header";
-import App from "../App";
+import Menu from "./menu/Menu";
 
 class Page extends React.Component {
   componentWillMount() {
@@ -25,7 +25,8 @@ class Page extends React.Component {
   render() {
     // Definerer alle komponenter
     const AllComponents = {
-      headercomponent: HeaderComponent
+      headercomponent: HeaderComponent,
+      menu: Menu
     };
 
     // Looper igjennom komponentene til siden
