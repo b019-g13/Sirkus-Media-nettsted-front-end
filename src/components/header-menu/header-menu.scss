@@ -1,0 +1,27 @@
+.navTop {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 40px 30px;
+    font-size: 1.5em;
+    font-family: "Rubik", sans-serif;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      padding: 10px;
+    }
+  }
+}
