@@ -25,13 +25,13 @@ class Router extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.pages.map(function(page, i) {
+        {/* {this.state.pages.map(function(page, i) {
           return (
             <div key={i}>
               <a href={"/" + page.id}>{page.title}</a>
             </div>
           );
-        })}
+        })} */}
 
         <BrowserRouter>
           <Switch>
