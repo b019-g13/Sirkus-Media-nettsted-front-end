@@ -9,7 +9,9 @@ class Page extends React.Component {
       pageComponents: [],
       readyComponents: [],
       menus: [],
-      readyMenus: []
+      readyMenus: {
+        navTop: null
+      }
     });
     this.getPageComponents();
     this.getMenus();
@@ -69,7 +71,7 @@ class Page extends React.Component {
       .then(response => {
         this.setState({ menus: response.data.data });
 
-        let menus = [];
+        let menus = {};
 
         for (let i = 0; i < this.state.menus.length; i++) {
           menus[this.state.menus[i].menu_location.slug] = this.state.menus[i];
@@ -85,46 +87,16 @@ class Page extends React.Component {
       });
   }
 
-  menuSetup() {
-    // Definerer alle menyer
-    const AllMenus = {
-      headermenu: HeaderMenu
-    };
-
-    const readyMenus = [];
-
-    // Looper igjennom komponentene til siden
-    this.state.pageComponents.map(function(pageComponent, i) {
-      const pageComponentsName = pageComponent.slug;
-
-      // Looper igjennom alle de definerte komponentene
-      Object.keys(AllMenus).map(function(slug) {
-        const AllMenusName = slug;
-        if (pageComponentsName === AllMenusName) {
-          const Comp = AllMenus[slug];
-          let componentFields = {};
-
-          // Looper gjennom alle fields/props til komponenten
-          for (let field = 0; field < pageComponent.fields.length; field++) {
-            const slug = pageComponent.fields[field].slug;
-            const value = pageComponent.fields[field].value;
-
-            componentFields[slug] = value;
-          }
-
-          readyMenus.push(<Comp {...componentFields} key={i} />);
-        }
-      });
-    });
-
-    return readyMenus;
-  }
-
   render() {
+    // console.log("a", this.state.readyMenus["navTop"]);
+    const navTop = this.state.readyMenus.navTop;
+    const condition = navTop != null;
+    const itsTrue = <HeaderMenu menu={navTop} />;
+    const itsFalse = null;
+
     return (
       <React.Fragment>
-        {/* <HeaderMenu menu={this.state.readyMenus["navTop"]} /> */}
-        <HeaderMenu menu={1} />
+        {condition ? itsTrue : itsFalse}
 
         {this.state.readyComponents.map(function(pageComponent, i) {
           return pageComponent;
