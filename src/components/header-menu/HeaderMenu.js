@@ -5,16 +5,16 @@ import Axios from "axios";
 class HeaderMenu extends React.Component {
   componentWillMount() {
     this.getPageMenus();
+    this.setState({
+      pageMenusLinks: []
+    });
   }
 
   getPageMenus() {
     console.log("hei");
     Axios.get("http://localhost:8000/api/v1/menus/" + this.props.menu.id)
       .then(response => {
-        // this.setState({ pageComponents: response.data.components });
-        // this.setState({ readyComponents: this.pageSetup() });
-
-        console.log("menu", response.data);
+        this.setState({ pageMenusLinks: response.data.links });
       })
       .catch(error => {
         console.error("Menu handle error", error);
@@ -25,9 +25,17 @@ class HeaderMenu extends React.Component {
   }
 
   render() {
+    console.log("menuSetup", this.state.pageMenusLinks);
+    const menuLinks = this.state.pageMenusLinks;
     return (
-      <nav className="nav">
-        <a href={this.props.a}>{console.log(this.props.a)}</a>
+      <nav className="navTop">
+        {menuLinks.map(function(links, i) {
+          return (
+            <a href={links.page_id} key={i}>
+              {links.name}
+            </a>
+          );
+        })}
       </nav>
     );
   }
