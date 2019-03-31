@@ -2,6 +2,8 @@ import React from "react";
 import Axios from "axios";
 import HeaderComponent from "./header/Header";
 import HeaderMenu from "./header-menu/HeaderMenu";
+import ActionBoxFrontPage from "./action-box/ActionBoxFrontPage";
+import AboutUs from "./about-us/AboutUs";
 
 class Page extends React.Component {
   componentWillMount() {
@@ -34,7 +36,9 @@ class Page extends React.Component {
   pageSetup() {
     // Definerer alle komponenter
     const AllComponents = {
-      headercomponent: HeaderComponent
+      headercomponent: HeaderComponent,
+      actionboxfrontpage: ActionBoxFrontPage,
+      aboutus: AboutUs
     };
 
     const readyComponents = [];
