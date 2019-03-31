@@ -9,19 +9,19 @@ class HeaderComponent extends React.Component {
           <section className="header-left">
             <h1>{this.props.h1}</h1>
             <p>{this.props.headerText}</p>
-          <button>{this.props.headerButton}</button>
-          <section className="header-contact-info">
-            <p>{this.props.headerContactText}</p>
-            <p className="contact-number">{this.props.headerContactNumber}</p>
+            <button>{this.props.headerButton}</button>
+            <section className="header-contact-info">
+              <p>{this.props.headerContactText}</p>
+              <p className="contact-number">{this.props.headerContactNumber}</p>
+            </section>
           </section>
-        </section>
-        <section className="header-right">
-          <img
-            src={this.props.headerIllustration.url}
-            alt=""
-            className="headerIcon"
-          />
-        </section>
+          <section className="header-right">
+            <img
+              src={this.props.headerIllustration.url}
+              alt={this.props.headerIllustration.attribute_alt}
+              className="headerIcon"
+            />
+          </section>
         </div>
       </header>
     );
