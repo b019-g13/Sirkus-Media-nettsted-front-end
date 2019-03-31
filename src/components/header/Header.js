@@ -5,9 +5,10 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <header className="header">
-        <section className="header-left">
-          <h1>{this.props.h1}</h1>
-          <p>{this.props.headerText}</p>
+        <div className="header-wrapper">
+          <section className="header-left">
+            <h1>{this.props.h1}</h1>
+            <p>{this.props.headerText}</p>
           <button>{this.props.headerButton}</button>
           <section className="header-contact-info">
             <p>{this.props.headerContactText}</p>
@@ -21,6 +22,7 @@ class HeaderComponent extends React.Component {
             className="headerIcon"
           />
         </section>
+        </div>
       </header>
     );
   }
