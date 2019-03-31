@@ -25,7 +25,6 @@ class HeaderMenu extends React.Component {
   }
 
   render() {
-    console.log("menuSetup", this.state.pageMenusLinks);
     const menuLinks = this.state.pageMenusLinks;
     return (
       <nav className="navTop">
