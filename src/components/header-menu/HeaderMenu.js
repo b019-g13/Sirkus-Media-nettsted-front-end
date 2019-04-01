@@ -11,7 +11,6 @@ class HeaderMenu extends React.Component {
   }
 
   getPageMenus() {
-    console.log("hei");
     Axios.get("http://localhost:8000/api/v1/menus/" + this.props.menu.id)
       .then(response => {
         this.setState({ pageMenusLinks: response.data.links });
