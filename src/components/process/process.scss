@@ -1,0 +1,51 @@
+.process {
+  width: 100%;
+  max-width: 1366px;
+  margin: 100px auto;
+
+  > h2 {
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  &-step {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &-left,
+    &-right {
+      width: 100%;
+      max-width: 50%;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 1374px) {
+      flex-direction: column;
+      align-items: center;
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+
+      &-right,
+      &-left {
+        max-width: 60%;
+      }
+
+      &-left {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+  }
+}
