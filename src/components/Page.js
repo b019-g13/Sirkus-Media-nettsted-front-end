@@ -10,6 +10,7 @@ import { isArray } from "util";
 import IconText from "./icon-text/IconText";
 import Contact from "./contact/Contact";
 import ContactForm from "./contact-form/ContactForm";
+import Footer from "./footer/Footer";
 
 class Page extends React.Component {
   componentWillMount() {
@@ -34,7 +35,8 @@ class Page extends React.Component {
     process: Process,
     processstep: ProcessStep,
     contact: Contact,
-    contactform: ContactForm
+    contactform: ContactForm,
+    footer: Footer
   };
 
   getPageComponents() {
