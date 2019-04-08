@@ -1,11 +1,15 @@
 import React from "react";
 import Axios from "axios";
-import HeaderComponent from "./header/Header";
+import Header from "./header/Header";
 import HeaderMenu from "./header-menu/HeaderMenu";
 import ActionBoxFrontPage from "./action-box-front-page/ActionBoxFrontPage";
 import AboutUs from "./about-us/AboutUs";
 import Process from "./process/Process";
 import ProcessStep from "./process-step/ProcessStep";
+import { isArray } from "util";
+import IconText from "./icon-text/IconText";
+import Contact from "./contact/Contact";
+import ContactForm from "./contact-form/ContactForm";
 
 class Page extends React.Component {
   componentWillMount() {
