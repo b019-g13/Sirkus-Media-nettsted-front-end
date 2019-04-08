@@ -35,18 +35,30 @@ $light-grey: #9baec8;
 
   &-top {
     &-text {
+    }
+
+    &-icon-texts,
+    &-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .icon-text {
       font-weight: 500;
     }
 
-    &-results {
-      font-family: "Roboto Mono", monospace;
-      font-size: 5em;
-      font-weight: 100;
-      margin: 0;
-      color: $light-grey;
+    &-info {
+      &-results {
+        font-family: "Roboto Mono", monospace;
+        font-size: 5em;
+        font-weight: 100;
+        margin: 0;
+        color: $light-grey;
 
-      @media screen and (max-width: 864px) {
-        font-size: 2em;
+        @media screen and (max-width: 864px) {
+          font-size: 2em;
+        }
       }
     }
   }
@@ -63,6 +75,7 @@ $light-grey: #9baec8;
       display: flex;
       justify-content: space-between;
       padding: 50px 0;
+      width: 100%;
 
       h2,
       p {
