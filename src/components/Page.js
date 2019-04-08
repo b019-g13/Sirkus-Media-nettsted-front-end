@@ -62,7 +62,15 @@ class Page extends React.Component {
         const slug = component.fields[field].slug;
         const value = component.fields[field].value;
 
-        componentFields[slug] = value;
+        if (componentFields[slug] == null) {
+          componentFields[slug] = value;
+        } else {
+          if (!isArray(componentFields[slug])) {
+            componentFields[slug] = [componentFields[slug]];
+          }
+
+          componentFields[slug].push(value);
+        }
       }
 
       if (component.children == null) {
