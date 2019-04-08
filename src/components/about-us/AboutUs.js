@@ -6,15 +6,15 @@ class AboutUs extends React.Component {
     return (
       <section className="about-us">
         <section className="about-us-left">
-          <img
+          {/* <img
             src={this.props.aboutUsImage.url}
             alt={this.props.aboutUsImage.attribute_alt}
             className="headerIcon"
-          />
+          /> */}
         </section>
         <section className="about-us-right">
-          <h2>{this.props.aboutUsHeading}</h2>
-          <p>{this.props.aboutUsText}</p>
+          <h2>{this.props["overskrift-2"]}</h2>
+          <p>{this.props["tekst"]}</p>
         </section>
       </section>
     );
