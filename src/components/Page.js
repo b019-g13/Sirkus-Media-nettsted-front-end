@@ -27,11 +27,14 @@ class Page extends React.Component {
 
   // Definerer alle komponenter
   AllComponents = {
-    headercomponent: HeaderComponent,
+    header: Header,
     actionboxfrontpage: ActionBoxFrontPage,
+    icontext: IconText,
     aboutus: AboutUs,
     process: Process,
-    processstep: ProcessStep
+    processstep: ProcessStep,
+    contact: Contact,
+    contactform: ContactForm
   };
 
   getPageComponents() {
