@@ -85,6 +85,9 @@ class Page extends React.Component {
         );
       }
     }
+
+    console.warn("Couldn't find component: ", component.slug);
+    return null;
   }
 
   pageSetup() {
