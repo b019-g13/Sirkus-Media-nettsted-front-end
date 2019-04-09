@@ -21,6 +21,11 @@ $background-second: #2bd9cb;
   align-items: center;
   &-sec {
     display: flex;
+
+    @media screen and (max-width: 460px) {
+      flex-direction: column;
+    }
+
     &-col {
       display: flex;
       flex-direction: column;
