@@ -5,6 +5,7 @@ $background-second: #2bd9cb;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   hr {
     width: 100%;
     max-width: 80%;
@@ -35,7 +36,7 @@ $background-second: #2bd9cb;
     border-radius: 4px;
   }
   input {
-    box-shadow: 7px 4px 20px -15px #2b91d9 $background-main;
+    box-shadow: 7px 4px 20px -15px $background-main;
   }
 
   button {
