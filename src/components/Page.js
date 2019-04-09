@@ -61,19 +61,20 @@ class Page extends React.Component {
     if (ReactComponent != null) {
       let componentFields = {};
 
-      // Looper gjennom alle fields/props til komponenten
-      for (let field = 0; field < component.fields.length; field++) {
-        const slug = component.fields[field].slug;
+      if (component.fields != null) {
+        // Looper gjennom alle fields/props til komponenten
+        for (let field = 0; field < component.fields.length; field++) {
+          const slug = component.fields[field].slug;
         const value = component.fields[field].value;
 
         if (componentFields[slug] == null) {
           componentFields[slug] = value;
         } else {
-          if (!isArray(componentFields[slug])) {
-            componentFields[slug] = [componentFields[slug]];
+            if (!isArray(componentFields[slug])) {
+              componentFields[slug] = [componentFields[slug]];
+            }
+            componentFields[slug].push(value);
           }
-
-          componentFields[slug].push(value);
         }
       }
 
