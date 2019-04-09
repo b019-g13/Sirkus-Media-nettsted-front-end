@@ -8,6 +8,7 @@ import Process from "./process/Process";
 import ProcessStep from "./process-step/ProcessStep";
 import { isArray } from "util";
 import IconText from "./icon-text/IconText";
+import IconLink from "./icon-link/IconLink";
 import Contact from "./contact/Contact";
 import ContactForm from "./contact-form/ContactForm";
 import Footer from "./footer/Footer";
@@ -31,6 +32,7 @@ class Page extends React.Component {
     header: Header,
     actionboxfrontpage: ActionBoxFrontPage,
     icontext: IconText,
+    iconlink: IconLink,
     aboutus: AboutUs,
     process: Process,
     processstep: ProcessStep,
