@@ -1,11 +1,31 @@
 $background-main: #454d5b;
 $background-second: #144364;
+$link-hover: rgb(212, 212, 212);
 
 .footer {
+  width: 100%;
   background-image: linear-gradient(
     135deg,
     $background-main,
     $background-second
   );
   color: white;
+  padding: 150px 100px 100px;
+  a {
+    display: block;
+    color: white;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-copyright {
+    text-align: center;
+  }
 }
