@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 $accent: #f89079;
 $background-main: #2b91d9;
 $background-second: #2bd9cb;
@@ -11,14 +13,14 @@ $background-second: #2bd9cb;
 
   &-wrapper {
     width: 100%;
-    max-width: 1366px;
+    max-width: $main-large;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 150px 100px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $main-medium) {
       padding: 75px 0;
       flex-direction: column;
 
@@ -91,11 +93,11 @@ $background-second: #2bd9cb;
     max-width: 50%;
     img {
       width: 100%;
-      max-width: 1920px;
+      max-width: $main-large;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $main-small) {
     h1 {
       font-size: 2em;
     }
