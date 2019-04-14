@@ -3,6 +3,7 @@ import Axios from "axios";
 import Header from "./header/Header";
 import HeaderMenu from "./header-menu/HeaderMenu";
 import ActionBoxFrontPage from "./action-box-front-page/ActionBoxFrontPage";
+import ActionBoxChild from "./action-box-child/ActionBoxChild";
 import AboutUs from "./about-us/AboutUs";
 import Process from "./process/Process";
 import ProcessStep from "./process-step/ProcessStep";
@@ -31,6 +32,7 @@ class Page extends React.Component {
   AllComponents = {
     header: Header,
     actionboxfrontpage: ActionBoxFrontPage,
+    actionboxchild: ActionBoxChild,
     icontext: IconText,
     iconlink: IconLink,
     aboutus: AboutUs,
@@ -65,11 +67,11 @@ class Page extends React.Component {
         // Looper gjennom alle fields/props til komponenten
         for (let field = 0; field < component.fields.length; field++) {
           const slug = component.fields[field].slug;
-        const value = component.fields[field].value;
+          const value = component.fields[field].value;
 
-        if (componentFields[slug] == null) {
-          componentFields[slug] = value;
-        } else {
+          if (componentFields[slug] == null) {
+            componentFields[slug] = value;
+          } else {
             if (!isArray(componentFields[slug])) {
               componentFields[slug] = [componentFields[slug]];
             }
