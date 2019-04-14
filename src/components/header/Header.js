@@ -16,13 +16,9 @@ class Header extends React.Component {
             </section>
           </section>
           <section className="header-right">
-            {/* <img
-              src={this.props.headerIllustration.url}
-              alt={this.props.headerIllustration.attribute_alt}
-              className="headerIcon"
-            /> */}
             <img
-              src="https://via.placeholder.com/300x100"
+              src={this.props.bilde.url_full}
+              alt={this.props.bilde.attribute_alt}
               className="headerIcon"
             />
           </section>

@@ -11,7 +11,10 @@ class Contact extends React.Component {
           return contactform;
         })}
         <section className="contact-map">
-          <img src="https://i.xdh.no/1adb1ef92f51" />
+          <img
+            src={this.props.bilde.url_full}
+            alt={this.props.bilde.attribute_alt}
+          />
         </section>
       </article>
     );

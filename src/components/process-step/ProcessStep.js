@@ -6,11 +6,10 @@ class ProcessStep extends React.Component {
     return (
       <section className="process-step">
         <section className="process-step-left">
-          {/* <img
-            src="../images/undraw_software_engineer_lvl5.png"
-            alt={this.props.processIllustration.attribute_alt}
-            className="headerIcon"
-          /> */}
+          <img
+            src={this.props.bilde.url_full}
+            alt={this.props.bilde.attribute_alt}
+          />
         </section>
         <section className="process-step-right">
           <h3>{this.props["overskrift-3"]}</h3>
