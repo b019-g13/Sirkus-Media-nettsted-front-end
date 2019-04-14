@@ -1,9 +1,11 @@
+@import "../../variables.scss";
+
 $grey: #808080;
 $light-grey: #9baec8;
 
-.actionBox {
+.action-box {
   width: 100%;
-  max-width: 1366px;
+  max-width: $main-large;
   margin: 0 auto;
   position: relative;
   top: -150px;
@@ -11,11 +13,11 @@ $light-grey: #9baec8;
   border-radius: 10px;
   box-shadow: 0px 0px 20px -10px $grey;
 
-  @media screen and (max-width: 1366px) {
-    max-width: 1024px;
+  @media screen and (max-width: $main-large) {
+    max-width: $main-medium;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $main-medium) {
     top: -20px;
   }
 
@@ -42,26 +44,15 @@ $light-grey: #9baec8;
   }
 
   &-top {
-    &-text {
-    }
-
-    &-icon-texts,
-    &-info {
-      width: 100%;
+    &-content {
       display: flex;
       justify-content: space-between;
-    }
-
-    .icon-text {
       width: 100%;
-      max-width: 33.33%;
-      font-weight: 500;
     }
-
-    &-info {
-      &-results {
+    .action-box-children {
+      &-res {
         font-family: "Roboto Mono", monospace;
-        font-size: 5em;
+        font-size: 4em;
         font-weight: 100;
         margin: 0;
         color: $light-grey;
@@ -69,6 +60,10 @@ $light-grey: #9baec8;
         @media screen and (max-width: 864px) {
           font-size: 2em;
         }
+      }
+
+      .icon-text {
+        font-weight: 500;
       }
     }
   }
@@ -98,7 +93,7 @@ $light-grey: #9baec8;
       p {
         max-width: 70%;
       }
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $main-medium) {
         flex-direction: column;
 
         h2,

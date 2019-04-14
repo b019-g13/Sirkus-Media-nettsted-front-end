@@ -1,17 +1,18 @@
+@import "../../variables.scss";
 .about-us {
   width: 100%;
-  max-width: 1366px;
+  max-width: $main-large;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
   &-left {
     width: 100%;
-    max-width: 70%;
+    max-width: 40%;
   }
   &-right {
     width: 100%;
-    max-width: 40%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
