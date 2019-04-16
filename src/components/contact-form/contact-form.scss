@@ -31,6 +31,13 @@ $background-second: #2bd9cb;
     }
     input {
       box-shadow: 7px 4px 20px -15px $background-main;
+
+      @media screen and (min-width: $size-m) {
+        padding: 5px 10px;
+      }
+      @media screen and (min-width: $size-l) {
+        padding: 10px 20px;
+      }
     }
 
     button {

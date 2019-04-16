@@ -1,10 +1,10 @@
 @import "../../variables.scss";
 
 .about-us {
-  padding: 150px 25px 0;
+  padding: 150px 25px 50px;
 
   @media screen and (min-width: $size-s) {
-    padding: 0;
+    padding: 0 0 150px;
   }
   @media screen and (min-width: $size-m) {
     display: flex;
@@ -12,6 +12,10 @@
   }
 
   &-left {
+    img {
+      box-shadow: 7px 4px 20px -15px #2b91d9;
+      border-radius: 8px;
+    }
     @media screen and (min-width: $size-m) {
       width: 100%;
       max-width: 40%;
