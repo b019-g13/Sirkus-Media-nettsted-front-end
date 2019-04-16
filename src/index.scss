@@ -22,7 +22,8 @@ img {
 }
 
 p,
-a {
+a,
+label {
   font-family: "Rubik", sans-serif;
 }
 
@@ -33,4 +34,22 @@ h4,
 h5,
 h6 {
   font-family: "EB Garamond", serif;
+}
+
+.layout-boxed {
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (min-width: $size-s) {
+    max-width: $size-xs;
+  }
+  @media screen and (min-width: $size-m) {
+    max-width: $size-s;
+  }
+  @media screen and (min-width: $size-l) {
+    max-width: $size-m;
+  }
+  @media screen and (min-width: $size-xl) {
+    max-width: $size-l;
+  }
 }
