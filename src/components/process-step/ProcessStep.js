@@ -4,7 +4,7 @@ import "../process/process.scss";
 class ProcessStep extends React.Component {
   render() {
     return (
-      <section className="process-step">
+      <article className="process-step">
         <section className="process-step-left">
           <img
             src={this.props.bilde.url_full}
@@ -15,7 +15,7 @@ class ProcessStep extends React.Component {
           <h3>{this.props["overskrift-3"]}</h3>
           <p>{this.props["tekst"]}</p>
         </section>
-      </section>
+      </article>
     );
   }
 }
