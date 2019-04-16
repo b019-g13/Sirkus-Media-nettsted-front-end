@@ -5,8 +5,7 @@ import "../contact-form/contact-form.scss";
 class Contact extends React.Component {
   render() {
     return (
-      <article className="contact">
-        <h2>{this.props["overskrift-2"]}</h2>
+      <article className="contact layout-boxed">
         {this.props.children.map((contactform, i) => {
           return contactform;
         })}

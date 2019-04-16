@@ -4,7 +4,7 @@ import "./about-us.scss";
 class AboutUs extends React.Component {
   render() {
     return (
-      <section className="about-us">
+      <section className="about-us layout-boxed">
         <section className="about-us-left">
           <img
             src={this.props.bilde.url_full}

@@ -6,6 +6,7 @@ class ActionBoxFrontPage extends React.Component {
     console.log("hersånn123", this.props.children);
     return (
       <article className="action-box">
+        <div className="action-box-inner layout-boxed">
         <h3>{this.props["overskrift-3"]}</h3>
         <div className="action-box-top">
           <section className="action-box-top-content">

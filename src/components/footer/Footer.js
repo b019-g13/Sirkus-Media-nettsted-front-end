@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <div className="footer-inner">
+        <div className="footer-inner layout-boxed">
           <section className="footer-inner-left">
             <div>
               <p>{this.props["tekst"][0]}</p>

@@ -5,7 +5,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <div className="header-wrapper">
+        <div className="header-inner layout-boxed">
           <section className="header-left">
             <h1>{this.props["overskrift-1"]}</h1>
             <p>{this.props["tekst"][0]}</p>
