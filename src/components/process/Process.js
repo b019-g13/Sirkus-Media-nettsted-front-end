@@ -4,13 +4,15 @@ import "./process.scss";
 class Process extends React.Component {
   render() {
     return (
-      <article className="process layout-boxed">
-        <h2>{this.props["overskrift-2"]}</h2>
+      <section className="process">
+        <div className="process-inner layout-boxed">
+          <h2>{this.props["overskrift-2"]}</h2>
 
-        {this.props.children.map((processstep, i) => {
-          return processstep;
-        })}
-      </article>
+          {this.props.children.map((processstep, i) => {
+            return processstep;
+          })}
+        </div>
+      </section>
     );
   }
 }
