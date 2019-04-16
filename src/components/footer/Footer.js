@@ -17,6 +17,7 @@ class Footer extends React.Component {
             <div className="footer-inner-left-links">
               <a href="#">{this.props["intern-link"][0]}</a>
               <a href="#">{this.props["intern-link"][1]}</a>
+              <a href="#">{this.props["intern-link"][2]}</a>
             </div>
             <p>{this.props["tekst"][1]}</p>
           </section>
@@ -24,7 +25,6 @@ class Footer extends React.Component {
             {this.props.children.map((children, i) => {
               return children;
             })}
-            <a href="#">{this.props["intern-link"][2]}</a>
           </section>
         </div>
         <div className="footer-copyright">
