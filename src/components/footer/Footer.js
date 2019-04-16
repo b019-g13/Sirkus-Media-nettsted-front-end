@@ -7,7 +7,11 @@ class Footer extends React.Component {
       <footer className="footer">
         <div className="footer-inner layout-boxed">
           <section className="footer-inner-left">
-            <div>
+            <div className="footer-inner-left-logo">
+              <img
+                src={this.props.bilde.url_full}
+                alt={this.props.bilde.attribute_alt}
+              />
               <p>{this.props["tekst"][0]}</p>
             </div>
             <div className="footer-inner-left-links">
