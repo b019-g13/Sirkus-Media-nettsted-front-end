@@ -16,12 +16,15 @@ class ActionBoxFrontPage extends React.Component {
           </div>
           <div className="action-box-bottom">
             <hr />
-          <section className="action-box-bottom-content">
-            <h2>{this.props["overskrift-2"]}</h2>
-            <p>{this.props["tekst"][3]}</p>
-          </section>
+            <section className="action-box-bottom-content">
+              <h2>{this.props["overskrift-2"]}</h2>
+              <p>{this.props["tekst"][3]}</p>
+            </section>
+          </div>
+          <div className="acplInformation">
+            <p>{this.props["tekst"][4]}</p>
+          </div>
         </div>
-        <p className="acplInformation">{this.props["tekst"][4]}</p>
       </article>
     );
   }
