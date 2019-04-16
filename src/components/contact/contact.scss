@@ -1,34 +1,35 @@
 @import "../../variables.scss";
 
 .contact {
-  width: 100%;
-  max-width: $main-large;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
+  padding: 50px 25px 50px;
+  @media screen and (min-width: $size-m) {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
 
   &-form,
   &-map {
-    width: 100%;
-    max-width: 50%;
+    @media screen and (min-width: $size-s) {
+      width: 100%;
+    }
   }
 
-  @media screen and (max-width: $main-medium) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-
-    &-map {
-      padding-top: 25px;
-      max-width: 80%;
+  &-form {
+    @media screen and (min-width: $size-m) {
+      max-width: 50%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
     }
   }
 
-  @media screen and (max-width: 460px) {
-    padding: 0 0 50px 0;
+  &-map {
+    padding-top: 25px;
+
+    @media screen and (min-width: $size-m) {
+      padding-top: 0;
+      max-width: 45%;
+    }
   }
 }

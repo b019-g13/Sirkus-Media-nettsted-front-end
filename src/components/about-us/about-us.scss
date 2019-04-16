@@ -1,35 +1,29 @@
 @import "../../variables.scss";
+
 .about-us {
-  width: 100%;
-  max-width: $main-large;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  padding: 150px 25px 0;
+
+  @media screen and (min-width: $size-s) {
+    padding: 0;
+  }
+  @media screen and (min-width: $size-m) {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &-left {
-    width: 100%;
-    max-width: 40%;
+    @media screen and (min-width: $size-m) {
+      width: 100%;
+      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &-right {
-    width: 100%;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  @media screen and (max-width: 1374px) {
-    flex-direction: column;
-    align-items: center;
-
-    &-right {
-      max-width: 60%;
-    }
-
-    &-left {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+    @media screen and (min-width: $size-m) {
+      width: 100%;
+      max-width: 50%;
     }
   }
 }

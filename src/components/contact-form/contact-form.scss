@@ -1,11 +1,12 @@
+@import "../../variables.scss";
+
 $background-main: #2b91d9;
 $background-second: #2bd9cb;
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  h2 {
+    text-align: center;
+  }
   hr {
     width: 100%;
     max-width: 80%;
@@ -13,46 +14,58 @@ $background-second: #2bd9cb;
     border: none;
     background-color: lighten($background-second, 30%);
   }
-}
 
-.contact-us {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &-sec {
-    display: flex;
-
-    @media screen and (max-width: 460px) {
-      flex-direction: column;
-    }
-
-    &-col {
+  .contact-us {
+    @media screen and (min-width: $size-s) {
       display: flex;
       flex-direction: column;
-      padding: 10px 20px;
     }
-  }
-  input,
-  button {
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 4px;
-  }
-  input {
-    box-shadow: 7px 4px 20px -15px $background-main;
-  }
 
-  button {
-    background-image: linear-gradient(
-      135deg,
-      $background-main,
-      $background-second
-    );
-    box-shadow: 0px 10px 30px -10px $background-main;
-    &:hover {
-      text-decoration: underline;
+    input,
+    button {
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+    input {
+      box-shadow: 7px 4px 20px -15px $background-main;
+    }
+
+    button {
+      background-image: linear-gradient(
+        135deg,
+        $background-main,
+        $background-second
+      );
+      box-shadow: 0px 10px 30px -10px $background-main;
+
+      &:hover {
+        text-decoration: underline;
+      }
+      @media screen and (min-width: $size-s) {
+        width: 100%;
+        max-width: 25%;
+        margin: 0 auto;
+      }
+    }
+    &-sec {
+      @media screen and (min-width: $size-s) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+
+        @media screen and (min-width: $size-s) {
+          padding: 10px 5px;
+        }
+      }
     }
   }
 }
