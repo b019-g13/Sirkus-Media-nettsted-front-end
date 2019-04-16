@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 $background-main: #454d5b;
 $background-second: #144364;
 $link-hover: rgb(212, 212, 212);
@@ -21,7 +23,33 @@ $link-hover: rgb(212, 212, 212);
   }
 
   &-inner {
+    width: 100%;
     padding: 50px 25px 50px;
+
+    @media screen and (min-width: $size-s) {
+      padding: 50px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-left,
+    &-right {
+      @media screen and (min-width: $size-s) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &-left {
+      width: 100%;
+      @media screen and (min-width: $size-s) {
+        max-width: 50%;
+      }
+
+      &-links {
+        padding: 10px 0;
+      }
+    }
   }
 
   &-copyright {
