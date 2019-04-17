@@ -10,7 +10,7 @@ class Router extends React.Component {
   }
 
   getPages() {
-    Axios.get("http://localhost:8000/api/v1/pages")
+    Axios.get("https://api.b019-g13.group/api/v1/pages")
       .then(response => {
         this.setState({ pages: response.data.data });
       })
