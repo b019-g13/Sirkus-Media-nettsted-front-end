@@ -3,8 +3,11 @@ import Axios from "axios";
 import Header from "./header/Header";
 import HeaderMenu from "./header-menu/HeaderMenu";
 import ActionBoxFrontPage from "./action-box-front-page/ActionBoxFrontPage";
+import ActionBoxAboutUs from "./action-box-about-us/ActionBoxAboutUs";
 import ActionBoxChild from "./action-box-child/ActionBoxChild";
 import AboutUs from "./about-us/AboutUs";
+import AboutUsChild from "./about-us-child/AboutUsChild";
+import Employee from "./employee/Employee";
 import Process from "./process/Process";
 import ProcessStep from "./process-step/ProcessStep";
 import { isArray } from "util";
@@ -32,10 +35,13 @@ class Page extends React.Component {
   AllComponents = {
     header: Header,
     actionboxfrontpage: ActionBoxFrontPage,
+    actionboxaboutus: ActionBoxAboutUs,
     actionboxchild: ActionBoxChild,
     icontext: IconText,
     iconlink: IconLink,
     aboutus: AboutUs,
+    aboutuschild: AboutUsChild,
+    employee: Employee,
     process: Process,
     processstep: ProcessStep,
     contact: Contact,
@@ -44,8 +50,15 @@ class Page extends React.Component {
   };
 
   getPageComponents() {
-    Axios.get("https://api.b019-g13.group/api/v1/pages/" + this.props.page.id)
+    Axios.get("http://localhost:8000/api/v1/pages/" + this.props.page.id)
       .then(response => {
+        const pageData = {
+          id: response.data.id,
+          title: response.data.title,
+          slug: response.data.slug
+        };
+
+        this.setState({ page: pageData });
         this.setState({ pageComponents: response.data.components });
         this.setState({ readyComponents: this.pageSetup() });
       })
@@ -53,7 +66,7 @@ class Page extends React.Component {
         console.error("Page components handle error", error);
       })
       .then(() => {
-        console.log("Page components always executed", this.state);
+        // console.log("Page components always executed", this.state);
       });
   }
 
@@ -108,6 +121,11 @@ class Page extends React.Component {
   pageSetup() {
     const readyComponents = [];
 
+    let slug = this.state.page.title.replace(" ", "-");
+    slug = slug.toLowerCase();
+
+    document.body.classList.add(slug);
+
     // Looper igjennom komponentene til siden
     this.state.pageComponents.map((component, i) => {
       readyComponents.push(this.setupComponent(component, i));
@@ -117,7 +135,7 @@ class Page extends React.Component {
   }
 
   getMenus() {
-    Axios.get("https://api.b019-g13.group/api/v1/menus")
+    Axios.get("http://localhost:8000/api/v1/menus")
       .then(response => {
         this.setState({ menus: response.data.data });
 
@@ -133,7 +151,7 @@ class Page extends React.Component {
         console.error("handle error", error);
       })
       .then(() => {
-        console.log("always executed", this.state);
+        // console.log("always executed", this.state);
       });
   }
 
