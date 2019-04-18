@@ -4,30 +4,33 @@
   padding: 150px 25px 50px;
 
   @media screen and (min-width: $size-s) {
-    padding: 0 0 150px;
+    padding: 50px 0 150px;
   }
   @media screen and (min-width: $size-m) {
     display: flex;
     justify-content: space-between;
   }
 
-  &-left {
-    img {
-      box-shadow: 7px 4px 20px -15px #2b91d9;
-      border-radius: 8px;
-    }
+  &-left,
+  &-right {
     @media screen and (min-width: $size-m) {
-      width: 100%;
-      max-width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
   }
-  &-right {
+
+  &-left {
     @media screen and (min-width: $size-m) {
       width: 100%;
       max-width: 50%;
+    }
+  }
+
+  &-right {
+    @media screen and (min-width: $size-m) {
+      width: 100%;
+      max-width: 45%;
     }
   }
 }
