@@ -50,7 +50,7 @@ class Page extends React.Component {
   };
 
   getPageComponents() {
-    Axios.get("http://localhost:8000/api/v1/pages/" + this.props.page.id)
+    Axios.get("https://api.b019-g13.group/api/v1/pages/" + this.props.page.id)
       .then(response => {
         const pageData = {
           id: response.data.id,
@@ -135,7 +135,7 @@ class Page extends React.Component {
   }
 
   getMenus() {
-    Axios.get("http://localhost:8000/api/v1/menus")
+    Axios.get("https://api.b019-g13.group/api/v1/menus")
       .then(response => {
         this.setState({ menus: response.data.data });
 
