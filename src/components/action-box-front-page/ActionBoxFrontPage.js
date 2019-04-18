@@ -1,5 +1,5 @@
 import React from "react";
-import "./action-box.scss";
+import "../action-box/action-box.scss";
 
 class ActionBoxFrontPage extends React.Component {
   render() {
