@@ -14,6 +14,9 @@ class Contact extends React.Component {
             src={this.props.bilde.url_full}
             alt={this.props.bilde.attribute_alt}
           />
+          <a href="#" className="button">
+            Åpne kart
+          </a>
         </section>
       </article>
     );
