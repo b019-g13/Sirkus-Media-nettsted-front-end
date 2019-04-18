@@ -47,6 +47,12 @@
       @media screen and (min-width: $size-s) {
         max-width: 60%;
       }
+      @media screen and (min-width: $size-l) {
+        max-width: 55%;
+      }
+      @media screen and (min-width: $size-xl) {
+        max-width: 50%;
+      }
     }
   }
 }
