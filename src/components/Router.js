@@ -13,6 +13,14 @@ class Router extends React.Component {
     Axios.get("https://api.b019-g13.group/api/v1/pages")
       .then(response => {
         this.setState({ pages: response.data.data });
+        this.state.pages.map(page => {
+          let slug = page.title.replace(" ", "-");
+          page.slug = slug.toLowerCase();
+
+          if (page.slug == "forside") {
+            this.setState({ frontpage: page });
+          }
+        });
       })
       .catch(error => {
         console.error("handle error", error);
