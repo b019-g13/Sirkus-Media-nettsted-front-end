@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PageComponent from "./Page";
+import Header from "./header/Header";
 import Axios from "axios";
 
 class Router extends React.Component {
@@ -51,6 +52,8 @@ class Router extends React.Component {
                   <PageComponent {...props} page={this.state.frontpage} />
                 )}
               />
+            )) || <Header overskrift-1="Laster ..." tekst={[]} />}
+
             {this.state.pages.map(function(page, i) {
               return (
                 <Route
