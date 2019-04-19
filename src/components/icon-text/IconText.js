@@ -2,11 +2,12 @@ import React from "react";
 
 class IconText extends React.Component {
   render() {
-    return (
-      <section className="icon-text">
-        <p>{this.props["tekst"]}</p>
-      </section>
-    );
+    let iconText = this.props["tekst"];
+    if (iconText) {
+      iconText = <p>{iconText}</p>;
+    }
+
+    return <section className="icon-text">{iconText}</section>;
   }
 }
 

@@ -3,6 +3,11 @@ import "../action-box/action-box.scss";
 
 class ActionBoxAboutUs extends React.Component {
   render() {
+    let actionBoxInnerh3 = this.props["overskrift-3"];
+    if (actionBoxInnerh3) {
+      actionBoxInnerh3 = <h3>{actionBoxInnerh3}</h3>;
+    }
+
     let actionBoxChildP = this.props["tekst"][0];
     if (actionBoxChildP) {
       actionBoxChildP = <p>{actionBoxChildP}</p>;
@@ -16,7 +21,7 @@ class ActionBoxAboutUs extends React.Component {
     return (
       <article className="action-box">
         <div className="action-box-inner layout-boxed">
-          <h3>{this.props["overskrift-3"]}</h3>
+          {actionBoxInnerh3}
           <div className="action-box-left-right-wrapper">
             <section className="action-box-left">
               {this.props.children.map((children, i) => {
