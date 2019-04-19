@@ -43,6 +43,14 @@ class Router extends React.Component {
 
         <BrowserRouter>
           <Switch>
+            {(this.state.frontpage && (
+              <Route
+                exact
+                path={"/"}
+                render={props => (
+                  <PageComponent {...props} page={this.state.frontpage} />
+                )}
+              />
             {this.state.pages.map(function(page, i) {
               return (
                 <Route
