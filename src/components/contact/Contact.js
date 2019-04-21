@@ -3,6 +3,17 @@ import "./contact.scss";
 import "../contact-form/contact-form.scss";
 
 class Contact extends React.Component {
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
+    }
+  }
   render() {
     let contactMapImg = this.props["bilde"];
     if (contactMapImg) {
@@ -25,8 +36,8 @@ class Contact extends React.Component {
     }
     return (
       <article className="contact layout-boxed">
-        {this.props.children.map((contactform, i) => {
-          return contactform;
+        {this.state.children.map(child => {
+          return child;
         })}
         <section className="contact-map">
           {contactMapImg}

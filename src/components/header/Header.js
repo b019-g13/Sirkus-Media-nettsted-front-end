@@ -2,6 +2,18 @@ import React from "react";
 import "./header.scss";
 
 class Header extends React.Component {
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
+    }
+  }
+
   render() {
     let headerLefth1 = this.props["overskrift-1"];
     if (headerLefth1) {
@@ -58,6 +70,9 @@ class Header extends React.Component {
             </section>
           </section>
           <section className="header-right">{headerRightImg}</section>
+          {this.state.children.map(child => {
+            return child;
+          })}
         </div>
       </header>
     );

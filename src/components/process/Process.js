@@ -2,6 +2,18 @@ import React from "react";
 import "./process.scss";
 
 class Process extends React.Component {
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
+    }
+  }
+
   render() {
     let processh2 = this.props["overskrift-2"];
     if (processh2) {
@@ -11,8 +23,8 @@ class Process extends React.Component {
       <section className="process">
         <div className="process-inner layout-boxed">
           {processh2}
-          {this.props.children.map((processstep, i) => {
-            return processstep;
+          {this.state.children.map(child => {
+            return child;
           })}
         </div>
       </section>

@@ -2,6 +2,17 @@ import React from "react";
 import "./footer.scss";
 
 class Footer extends React.Component {
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
+    }
+  }
   render() {
     return (
       <footer className="footer">
@@ -22,8 +33,8 @@ class Footer extends React.Component {
             <p>{this.props["tekst"][1]}</p>
           </section>
           <section className="footer-inner-right">
-            {this.props.children.map((children, i) => {
-              return children;
+            {this.state.children.map(child => {
+              return child;
             })}
           </section>
         </div>

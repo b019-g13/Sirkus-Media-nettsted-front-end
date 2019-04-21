@@ -2,11 +2,17 @@ import React from "react";
 import "../action-box/action-box.scss";
 
 class ActionBoxFrontPage extends React.Component {
-  render() {
-    let actionBoxInnerh3 = this.props["overskrift-3"];
-    if (actionBoxInnerh3) {
-      actionBoxInnerh3 = <h3>{actionBoxInnerh3}</h3>;
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
     }
+  }
 
     let actionBoxBottomh2 = this.props["overskrift-2"];
     if (actionBoxBottomh2) {
@@ -27,11 +33,9 @@ class ActionBoxFrontPage extends React.Component {
         <div className="action-box-inner layout-boxed">
           {actionBoxInnerh3}
           <div className="action-box-top">
-            {/* <section className="action-box-top-content"> */}
-            {this.props.children.map((children, i) => {
-              return children;
+          {this.state.children.map(child => {
+            return child;
             })}
-            {/* </section> */}
           </div>
           <div className="action-box-bottom">
             <hr />
