@@ -15,7 +15,7 @@ class Contact extends React.Component {
     }
   }
   render() {
-    let contactMapImg = this.props["bilde"];
+    let contactMapImg = this.props["img"];
     if (contactMapImg) {
       contactMapImg = (
         <img
@@ -26,7 +26,7 @@ class Contact extends React.Component {
       );
     }
 
-    let contactMapButton = this.props["ekstern-link"];
+    let contactMapButton = this.props["a_ext"];
     if (contactMapButton) {
       contactMapButton = (
         <a href="#" className="button">

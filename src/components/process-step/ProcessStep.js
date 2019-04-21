@@ -3,7 +3,7 @@ import "../process/process.scss";
 
 class ProcessStep extends React.Component {
   render() {
-    let processStepImg = this.props["bilde"];
+    let processStepImg = this.props["img"];
     if (processStepImg) {
       processStepImg = (
         <img
@@ -14,12 +14,12 @@ class ProcessStep extends React.Component {
       );
     }
 
-    let processSteph3 = this.props["overskrift-3"];
+    let processSteph3 = this.props["h3"];
     if (processSteph3) {
       processSteph3 = <h3>{processSteph3}</h3>;
     }
 
-    let processStepP = this.props["tekst"];
+    let processStepP = this.props["p"];
     if (processStepP) {
       processStepP = <p>{processStepP}</p>;
     }

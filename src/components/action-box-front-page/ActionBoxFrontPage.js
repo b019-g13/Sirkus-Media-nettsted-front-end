@@ -14,39 +14,41 @@ class ActionBoxFrontPage extends React.Component {
     }
   }
 
-    let actionBoxBottomh2 = this.props["overskrift-2"];
+  render() {
+    let actionBoxBottomh2 = this.props["h2"];
     if (actionBoxBottomh2) {
       actionBoxBottomh2 = <h2>{actionBoxBottomh2}</h2>;
     }
 
-    let actionBoxFrontPageP1 = this.props["tekst"][3];
-    if (actionBoxFrontPageP1) {
-      actionBoxFrontPageP1 = <p>{actionBoxFrontPageP1}</p>;
+    let actionBoxFrontPageP1;
+    let actionBoxFrontPageP2;
+    if (this.props["p"]) {
+      actionBoxFrontPageP1 = this.props["p"][0];
+      if (actionBoxFrontPageP1) {
+        actionBoxFrontPageP1 = <p>{actionBoxFrontPageP1}</p>;
+      }
+      actionBoxFrontPageP2 = this.props["p"][1];
+      if (actionBoxFrontPageP2) {
+        actionBoxFrontPageP2 = <p>{actionBoxFrontPageP2}</p>;
+      }
     }
 
-    let actionBoxFrontPageP2 = this.props["tekst"][4];
-    if (actionBoxFrontPageP2) {
-      actionBoxFrontPageP2 = <p>{actionBoxFrontPageP2}</p>;
-    }
     return (
-      <article className="action-box">
-        <div className="action-box-inner layout-boxed">
-          {actionBoxInnerh3}
-          <div className="action-box-top">
+      <React.Fragment>
+        <div className="action-box-top">
           {this.state.children.map(child => {
             return child;
-            })}
-          </div>
-          <div className="action-box-bottom">
-            <hr />
-            <section className="action-box-bottom-content">
-              {actionBoxBottomh2}
-              {actionBoxFrontPageP1}
-            </section>
-          </div>
-          <div className="acplInformation">{actionBoxFrontPageP2}</div>
+          })}
         </div>
-      </article>
+        <div className="action-box-bottom">
+          <hr />
+          <section className="action-box-bottom-content">
+            {actionBoxBottomh2}
+            {actionBoxFrontPageP1}
+          </section>
+        </div>
+        <div className="acplInformation">{actionBoxFrontPageP2}</div>
+      </React.Fragment>
     );
   }
 }

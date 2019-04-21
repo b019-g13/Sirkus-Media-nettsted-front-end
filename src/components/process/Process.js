@@ -15,7 +15,7 @@ class Process extends React.Component {
   }
 
   render() {
-    let processh2 = this.props["overskrift-2"];
+    let processh2 = this.props["h2"];
     if (processh2) {
       processh2 = <h2>{processh2}</h2>;
     }

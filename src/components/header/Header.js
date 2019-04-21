@@ -15,17 +15,12 @@ class Header extends React.Component {
   }
 
   render() {
-    let headerLefth1 = this.props["overskrift-1"];
+    let headerLefth1 = this.props["h1"];
     if (headerLefth1) {
       headerLefth1 = <h1>{headerLefth1}</h1>;
     }
 
-    let headerLeftP = this.props["tekst"][0];
-    if (headerLeftP) {
-      headerLeftP = <p>{headerLeftP}</p>;
-    }
-
-    let headerLeftButton = this.props["knapp-intern"];
+    let headerLeftButton = this.props["a_int"];
     if (headerLeftButton) {
       headerLeftButton = (
         <a href="#" className="button">
@@ -46,7 +41,7 @@ class Header extends React.Component {
       );
     }
 
-    let headerRightImg = this.props["bilde"];
+    let headerRightImg = this.props["img"];
     if (headerRightImg) {
       headerRightImg = (
         <img
