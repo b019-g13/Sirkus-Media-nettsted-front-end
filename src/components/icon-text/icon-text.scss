@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.icon-text {
+  display: flex;
+  align-items: end;
+  padding: 8px 0;
+
+  &-icon {
+    img {
+      padding-right: 4px;
+    }
+  }
+
+  &-text {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

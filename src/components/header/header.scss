@@ -16,6 +16,7 @@ $background-second: #2bd9cb;
   }
 
   .button {
+    display: block;
     font-size: 1em;
     background-color: $accent;
     border: none;
@@ -25,6 +26,7 @@ $background-second: #2bd9cb;
     text-decoration: none;
     border-radius: 4px;
     box-shadow: 0px 10px 30px -10px darken($accent, 5%);
+    text-align: center;
 
     &:hover {
       background-color: darken($accent, 2.5%);
@@ -81,12 +83,17 @@ $background-second: #2bd9cb;
       align-items: baseline;
 
       p {
-        margin: 0;
-        padding: 16px 8px 0 0;
+        padding-right: 8px;
       }
 
       .contact-number {
         font-size: 1.2em;
+      }
+
+      .icon-text-icon {
+        img {
+          max-height: 20px;
+        }
       }
     }
   }
