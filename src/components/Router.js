@@ -52,7 +52,7 @@ class Router extends React.Component {
                   <PageComponent {...props} page={this.state.frontpage} />
                 )}
               />
-            )) || <Header overskrift-1="Laster ..." tekst={[]} />}
+            )) || <Header overskrift-1="Laster ..." />}
 
             {this.state.pages.map(function(page, i) {
               return (
