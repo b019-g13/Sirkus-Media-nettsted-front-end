@@ -30,9 +30,17 @@ class Header extends React.Component {
       );
     }
 
-    let headerContactInfo1 = this.props["tekst"][1];
-    if (headerContactInfo1) {
-      headerContactInfo1 = <p>{headerContactInfo1}</p>;
+    let headerLeftP;
+    let headerContactInfo1;
+    if (this.props["p"]) {
+      headerLeftP = this.props["p"][0];
+      if (headerLeftP) {
+        headerLeftP = <p>{headerLeftP}</p>;
+      }
+      headerContactInfo1 = this.props["p"][1];
+      if (headerContactInfo1) {
+        headerContactInfo1 = <p>{headerContactInfo1}</p>;
+      }
     }
 
     let headerLeftIconText = null;
