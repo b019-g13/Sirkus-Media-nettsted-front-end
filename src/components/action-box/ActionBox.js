@@ -2,6 +2,17 @@ import React from "react";
 import "./action-box.scss";
 
 class ActionBoxFrontPage extends React.Component {
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
+    }
+  }
   render() {
     let actionBoxInnerh3 = this.props["h3"];
     if (actionBoxInnerh3) {
@@ -11,7 +22,7 @@ class ActionBoxFrontPage extends React.Component {
       <article className="action-box">
         <div className="action-box-inner layout-boxed">
           {actionBoxInnerh3}
-          {this.props.children.map(child => {
+          {this.state.children.map(child => {
             return child;
           })}
         </div>

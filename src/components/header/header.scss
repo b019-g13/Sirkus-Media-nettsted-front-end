@@ -117,3 +117,23 @@ body.om-oss {
     }
   }
 }
+
+body.kontakt-oss {
+  .header {
+    img {
+      @media screen and (min-width: $size-s) {
+        margin-bottom: -120px;
+        margin-left: 80px;
+      }
+      @media screen and (min-width: $size-m) {
+        margin-left: 100px;
+      }
+      @media screen and (min-width: $size-l) {
+        margin-left: 200px;
+      }
+      @media screen and (min-width: $size-xl) {
+        margin-left: 400px;
+      }
+    }
+  }
+}

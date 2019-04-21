@@ -5,7 +5,7 @@ import HeaderMenu from "./header-menu/HeaderMenu";
 import ActionBox from "./action-box/ActionBox";
 import ActionBoxFrontPage from "./action-box-front-page/ActionBoxFrontPage";
 import ActionBoxFrontPageChild from "./action-box-front-page-child/ActionBoxFrontPageChild";
-import ActionBoxAboutUs from "./action-box-about-us/ActionBoxAboutUs";
+import ActionBoxOther from "./action-box-other/ActionBoxOther";
 import AboutUs from "./about-us/AboutUs";
 import AboutUsChild from "./about-us-child/AboutUsChild";
 import Employee from "./employee/Employee";
@@ -14,6 +14,8 @@ import ProcessStep from "./process-step/ProcessStep";
 import { isArray } from "util";
 import IconText from "./icon-text/IconText";
 import IconLink from "./icon-link/IconLink";
+import WrapperWhiteBackground from "./wrapper-white-background/WrapperWhiteBackground";
+import HeadingText from "./heading-text/HeadingText";
 import Contact from "./contact/Contact";
 import ContactForm from "./contact-form/ContactForm";
 import Footer from "./footer/Footer";
@@ -37,10 +39,12 @@ class Page extends React.Component {
     header: Header,
     "action-box": ActionBox,
     "action-box-front-page": ActionBoxFrontPage,
-    "action-box-about-us": ActionBoxAboutUs,
+    "action-box-other": ActionBoxOther,
     "action-box-front-page-child": ActionBoxFrontPageChild,
     "icon-text": IconText,
     "icon-link": IconLink,
+    "heading-text": HeadingText,
+    "wrapper-white-background": WrapperWhiteBackground,
     "about-us": AboutUs,
     "about-us-child": AboutUsChild,
     employee: Employee,

@@ -2,7 +2,7 @@ import React from "react";
 import "./employee.scss";
 class Employee extends React.Component {
   render() {
-    let employeeLeftImg = this.props["bilde"];
+    let employeeLeftImg = this.props["img"];
     if (employeeLeftImg) {
       employeeLeftImg = (
         <img
@@ -12,23 +12,23 @@ class Employee extends React.Component {
       );
     }
 
-    let employeeRighth2 = this.props["overskrift-2"];
+    let employeeRighth2 = this.props["h2"];
     if (employeeRighth2) {
       employeeRighth2 = <h2>{employeeRighth2}</h2>;
     }
 
-    let employeeRightRole = this.props["overskrift-3"];
+    let employeeRightRole = this.props["h3"];
     if (employeeRightRole) {
       employeeRightRole = <p className="employee-role">{employeeRightRole}</p>;
     }
 
-    let employeeRightP = this.props["tekst"];
+    let employeeRightP = this.props["p"];
     if (employeeRightP) {
       employeeRightP = <p>{employeeRightP}</p>;
     }
 
     return (
-      <article className="about-us-emp layout-boxed">
+      <article className="about-us-emp">
         <section className="about-us-emp-left">{employeeLeftImg}</section>
         <section className="about-us-emp-right">
           {employeeRighth2}
