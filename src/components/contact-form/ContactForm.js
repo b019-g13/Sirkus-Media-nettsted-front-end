@@ -2,44 +2,47 @@ import React from "react";
 
 class ContactForm extends React.Component {
   render() {
-    let contactFormh2 = this.props["overskrift-2"];
+    let contactFormh2 = this.props["h2"];
     if (contactFormh2) {
       contactFormh2 = <h2>{contactFormh2}</h2>;
     }
 
-    let contactFormName = this.props["tekst"][0];
-    if (contactFormName) {
-      contactFormName = <label htmlFor="name">{contactFormName}</label>;
-    } else {
-      contactFormName = <label htmlFor="name">Navn</label>;
+    let contactFormName;
+    let contactFormCompanyname;
+    let contactFormMail;
+    let contactFormNumber;
+    if (this.props["p"]) {
+      contactFormName = this.props["p"][0];
+      if (contactFormName) {
+        contactFormName = <label htmlFor="name">{contactFormName}</label>;
+      } else {
+        contactFormName = <label htmlFor="name">Navn</label>;
+      }
+      contactFormCompanyname = this.props["p"][1];
+      if (contactFormCompanyname) {
+        contactFormCompanyname = (
+          <label htmlFor="companyname">{contactFormCompanyname}</label>
+        );
+      } else {
+        contactFormCompanyname = (
+          <label htmlFor="companyname">Bedriftsnavn</label>
+        );
+      }
+      contactFormMail = this.props["p"][2];
+      if (contactFormMail) {
+        contactFormMail = <label htmlFor="mail">{contactFormMail}</label>;
+      } else {
+        contactFormMail = <label htmlFor="mail">E-post</label>;
+      }
+      contactFormNumber = this.props["p"][3];
+      if (contactFormNumber) {
+        contactFormNumber = <label htmlFor="number">{contactFormNumber}</label>;
+      } else {
+        contactFormNumber = <label htmlFor="number">Mobil</label>;
+      }
     }
 
-    let contactFormCompanyname = this.props["tekst"][1];
-    if (contactFormCompanyname) {
-      contactFormCompanyname = (
-        <label htmlFor="companyname">{contactFormCompanyname}</label>
-      );
-    } else {
-      contactFormCompanyname = (
-        <label htmlFor="companyname">Bedriftsnavn</label>
-      );
-    }
-
-    let contactFormMail = this.props["tekst"][2];
-    if (contactFormMail) {
-      contactFormMail = <label htmlFor="mail">{contactFormMail}</label>;
-    } else {
-      contactFormMail = <label htmlFor="mail">E-post</label>;
-    }
-
-    let contactFormNumber = this.props["tekst"][3];
-    if (contactFormNumber) {
-      contactFormNumber = <label htmlFor="number">{contactFormNumber}</label>;
-    } else {
-      contactFormNumber = <label htmlFor="number">Mobil</label>;
-    }
-
-    let contactFormButton = this.props["knapp-intern"];
+    let contactFormButton = this.props["a_int"];
     if (contactFormButton) {
       contactFormButton = <button type="submit">{contactFormButton}</button>;
     }
