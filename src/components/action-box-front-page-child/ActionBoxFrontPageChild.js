@@ -1,8 +1,19 @@
 import React from "react";
 
 class ActionBoxChild extends React.Component {
+  componentWillMount() {
+    this.setState({
+      children: []
+    });
+
+    if (this.props.children != null) {
+      this.setState({
+        children: this.props.children
+      });
+    }
+  }
   render() {
-    let actionBoxChildP = this.props["tekst"];
+    let actionBoxChildP = this.props["p"];
     if (actionBoxChildP) {
       actionBoxChildP = (
         <p className="action-box-children-res">{actionBoxChildP}</p>
@@ -11,8 +22,8 @@ class ActionBoxChild extends React.Component {
 
     return (
       <section className="action-box-children">
-        {this.props.children.map((icontext, i) => {
-          return icontext;
+        {this.state.children.map(child => {
+          return child;
         })}
         {actionBoxChildP}
       </section>
