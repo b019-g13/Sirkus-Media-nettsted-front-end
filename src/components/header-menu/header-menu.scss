@@ -1,28 +1,43 @@
-// @import "../../variables.scss";
+@import "../../variables.scss";
 
-// .navTop {
-//   position: absolute;
-//   width: 100%;
-//   display: flex;
-//   justify-content: flex-end;
+.navTop {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-//   a {
-//     color: white;
-//     text-decoration: none;
-//     padding: 40px 30px;
-//     font-size: 1.5em;
+  @media screen and (min-width: $size-s) {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: $size-xs;
+  }
 
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
+  @media screen and (min-width: $size-l) {
+    max-width: $size-m;
+  }
 
-//   @media screen and (max-width: $main-small) {
-//     flex-direction: column;
-//     align-items: center;
+  @media screen and (min-width: $size-xl) {
+    max-width: $size-l;
+  }
 
-//     a {
-//       padding: 10px;
-//     }
-//   }
-// }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (min-width: $size-xs) {
+      padding: 16px 0 0 32px;
+    }
+
+    @media screen and (min-width: $size-l) {
+      padding: 32px 0 0 64px;
+    }
+  }
+}

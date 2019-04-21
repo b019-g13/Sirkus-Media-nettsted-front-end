@@ -27,7 +27,7 @@ class Page extends React.Component {
       readyComponents: [],
       menus: [],
       readyMenus: {
-        navTop: null
+        top: null
       }
     });
     this.getPageComponents();
@@ -162,16 +162,23 @@ class Page extends React.Component {
   }
 
   render() {
-    const navTop = this.state.readyMenus.navTop;
-    const condition = navTop != null;
-    const itsTrue = <HeaderMenu menu={navTop} />;
-    const itsFalse = null;
+    // const top = this.state.readyMenus[1];
+    // const condition = top != null;
+    // const itsTrue = <HeaderMenu menu={top} />;
+    // const itsFalse = null;
+
+    let top = this.state.readyMenus["top"];
+    let headerMenu;
+    if (top != null) {
+      headerMenu = <HeaderMenu menu={top} />;
+    }
 
     return (
       <React.Fragment>
-        {condition ? itsTrue : itsFalse}
+        {/* {condition ? itsTrue : itsFalse} */}
+        {headerMenu}
 
-        {this.state.readyComponents.map(function(pageComponent, i) {
+        {this.state.readyComponents.map(function(pageComponent) {
           return pageComponent;
         })}
         {/* <FooterMenu /> */}
