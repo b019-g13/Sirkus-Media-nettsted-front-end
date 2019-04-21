@@ -2,9 +2,10 @@ import React from "react";
 import Axios from "axios";
 import Header from "./header/Header";
 import HeaderMenu from "./header-menu/HeaderMenu";
+import ActionBox from "./action-box/ActionBox";
 import ActionBoxFrontPage from "./action-box-front-page/ActionBoxFrontPage";
+import ActionBoxFrontPageChild from "./action-box-front-page-child/ActionBoxFrontPageChild";
 import ActionBoxAboutUs from "./action-box-about-us/ActionBoxAboutUs";
-import ActionBoxChild from "./action-box-child/ActionBoxChild";
 import AboutUs from "./about-us/AboutUs";
 import AboutUsChild from "./about-us-child/AboutUsChild";
 import Employee from "./employee/Employee";
@@ -34,18 +35,19 @@ class Page extends React.Component {
   // Definerer alle komponenter
   AllComponents = {
     header: Header,
-    actionboxfrontpage: ActionBoxFrontPage,
-    actionboxaboutus: ActionBoxAboutUs,
-    actionboxchild: ActionBoxChild,
-    icontext: IconText,
-    iconlink: IconLink,
-    aboutus: AboutUs,
-    aboutuschild: AboutUsChild,
+    "action-box": ActionBox,
+    "action-box-front-page": ActionBoxFrontPage,
+    "action-box-about-us": ActionBoxAboutUs,
+    "action-box-front-page-child": ActionBoxFrontPageChild,
+    "icon-text": IconText,
+    "icon-link": IconLink,
+    "about-us": AboutUs,
+    "about-us-child": AboutUsChild,
     employee: Employee,
     process: Process,
-    processstep: ProcessStep,
+    "process-step": ProcessStep,
     contact: Contact,
-    contactform: ContactForm,
+    "contact-form": ContactForm,
     footer: Footer
   };
 
