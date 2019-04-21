@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.scss";
+import IconText from "../icon-text/IconText";
 
 class Header extends React.Component {
   componentWillMount() {
@@ -34,12 +35,17 @@ class Header extends React.Component {
       headerContactInfo1 = <p>{headerContactInfo1}</p>;
     }
 
-    let headerContactInfo2 = this.props["tekst"][2];
-    if (headerContactInfo2) {
-      headerContactInfo2 = (
-        <p className="contact-number">{headerContactInfo2}</p>
-      );
-    }
+    let headerLeftIconText = null;
+    this.state.children.map(child => {
+      if (child.type == IconText && headerLeftIconText == null) {
+        // Save component in variable
+        headerLeftIconText = <div className="contact-number">{child}</div>;
+
+        // Remove component from the children array
+        const indexOfChild = this.state.children.indexOf(child);
+        this.state.children.splice(indexOfChild, 1);
+      }
+    });
 
     let headerRightImg = this.props["img"];
     if (headerRightImg) {
@@ -61,7 +67,7 @@ class Header extends React.Component {
             {headerLeftButton}
             <section className="header-contact-info">
               {headerContactInfo1}
-              {headerContactInfo2}
+              {headerLeftIconText}
             </section>
           </section>
           <section className="header-right">{headerRightImg}</section>
