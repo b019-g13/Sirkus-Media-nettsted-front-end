@@ -1,12 +1,13 @@
 @import "../../variables.scss";
 
-.navTop {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.nav-top {
+  display: none;
 
   @media screen and (min-width: $size-s) {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    padding: 25px 0;
     flex-direction: row;
     justify-content: flex-end;
     margin: 0 auto;
@@ -33,11 +34,42 @@
     }
 
     @media screen and (min-width: $size-xs) {
-      padding: 16px 0 0 32px;
+      padding-right: 32px;
     }
 
     @media screen and (min-width: $size-l) {
-      padding: 32px 0 0 64px;
+      padding-right: 64px;
+    }
+  }
+
+  &-right,
+  &-left {
+    width: 100%;
+    max-width: 50%;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $size-s) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  #nav-top-right-btn {
+    width: 100%;
+    max-width: 25%;
+    display: block;
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    padding: 0;
+    outline: inherit;
+
+    @media screen and (min-width: $size-s) {
+      display: none;
     }
   }
 }

@@ -11,6 +11,10 @@ $background-second: #2bd9cb;
     $background-second
   );
 
+  @media screen and (min-width: $size-s) {
+    padding-top: 50px;
+  }
+
   p {
     padding: 20px 0;
   }
