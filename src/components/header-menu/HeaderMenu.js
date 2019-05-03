@@ -30,7 +30,9 @@ class HeaderMenu extends React.Component {
     return (
       <nav className="nav-top">
         <section className="nav-top-left">
-          <img src={logo} alt="Logo: Sirkus Media" />
+          <a href="/">
+            <img src={logo} alt="Logo: Sirkus Media" />
+          </a>
         </section>
         <section className="nav-top-right">
           <button id="nav-top-right-btn">
