@@ -2,13 +2,11 @@
 
 .icon-link {
   display: flex;
-  align-items: end;
-  padding: 8px 0;
+  align-items: flex-start;
+  padding: 0.5em 0;
 
   &-icon {
-    img {
-      padding-right: 4px;
-    }
+    padding-right: 1em;
   }
 
   &-link {
