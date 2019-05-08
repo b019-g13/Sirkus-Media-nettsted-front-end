@@ -40,6 +40,10 @@ $light-grey: #9baec8;
     font-family: "Rubik", sans-serif;
     font-weight: 100;
     font-size: 1em;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media screen and (min-width: 365px) {
       top: -1.5em;
@@ -100,14 +104,16 @@ $light-grey: #9baec8;
     &-res {
       font-family: "Roboto Mono", monospace;
       font-size: 1.8em;
-      font-weight: 100;
+      font-weight: 300;
       margin: 0;
       color: $light-grey;
+      word-spacing: -0.33em;
 
       @media screen and (min-width: $size-s) {
         font-size: 2em;
       }
       @media screen and (min-width: $size-m) {
+        font-weight: 100;
         font-size: 3em;
       }
       @media screen and (min-width: $size-l) {
@@ -183,7 +189,7 @@ body.forside {
   .action-box {
     .icon-text {
       flex-direction: column;
-      align-items: end;
+      align-items: flex-start;
 
       img {
         padding: 0 0 16px;
