@@ -11,9 +11,7 @@ $background-second: #2bd9cb;
     $background-second
   );
 
-  @media screen and (min-width: $size-s) {
-    padding-top: 50px;
-  }
+  padding-top: 50px;
 
   p {
     padding: 20px 0;
@@ -25,12 +23,17 @@ $background-second: #2bd9cb;
     background-color: $accent;
     border: none;
     padding: 20px 30px;
+    line-height: 1;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 4px;
     box-shadow: 0px 10px 30px -10px darken($accent, 5%);
     text-align: center;
+
+    @media screen and (min-width: $size-s) {
+      white-space: nowrap;
+    }
 
     &:hover {
       background-color: darken($accent, 2.5%);
@@ -57,11 +60,18 @@ $background-second: #2bd9cb;
       flex-direction: column;
       justify-content: center;
       align-items: baseline;
-      max-width: 50%;
     }
   }
 
   &-left {
+    @media screen and (min-width: $size-s) {
+      max-width: 60%;
+    }
+
+    @media screen and (min-width: $size-m) {
+      max-width: 50%;
+    }
+
     h1,
     p {
       color: white;
@@ -69,6 +79,7 @@ $background-second: #2bd9cb;
 
     h1 {
       font-size: 2.3rem;
+      line-height: 1;
       overflow-wrap: break-word;
       margin: 0;
       font-weight: 400;
@@ -104,6 +115,15 @@ $background-second: #2bd9cb;
 
   &-right {
     padding-bottom: 50px;
+
+    @media screen and (min-width: $size-s) {
+      padding-bottom: 0px;
+      max-width: 40%;
+    }
+
+    @media screen and (min-width: $size-m) {
+      max-width: 50%;
+    }
 
     img {
       position: relative;
