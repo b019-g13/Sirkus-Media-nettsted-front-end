@@ -102,6 +102,11 @@ $accent: #f89079;
 
       .contact-number {
         font-size: 1.2em;
+
+        .icon-text {
+          display: flex;
+          align-items: baseline;
+        }
       }
 
       .icon-text-icon {
