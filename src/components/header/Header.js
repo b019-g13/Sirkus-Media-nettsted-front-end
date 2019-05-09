@@ -24,8 +24,8 @@ class Header extends React.Component {
     let headerLeftButton = this.props["a_int"];
     if (headerLeftButton) {
       headerLeftButton = (
-        <a href="#" className="button">
-          {headerLeftButton}
+        <a href={headerLeftButton.value} className="button">
+          {headerLeftButton.name}
         </a>
       );
     }

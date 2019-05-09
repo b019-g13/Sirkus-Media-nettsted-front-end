@@ -61,11 +61,11 @@ class Footer extends React.Component {
     if (this.props["a_int"]) {
       footerA1 = this.props["a_int"][0];
       if (footerA1) {
-        footerA1 = <a href="#">{footerA1}</a>;
+        footerA1 = <a href={footerA1.value}>{footerA1.name}</a>;
       }
       footerA2 = this.props["a_int"][1];
       if (footerA2) {
-        footerA2 = <a href="#">{footerA2}</a>;
+        footerA2 = <a href={footerA2.value}>{footerA2.name}</a>;
       }
     }
     return (

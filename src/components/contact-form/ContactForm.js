@@ -44,7 +44,9 @@ class ContactForm extends React.Component {
 
     let contactFormButton = this.props["a_int"];
     if (contactFormButton) {
-      contactFormButton = <button type="submit">{contactFormButton}</button>;
+      contactFormButton = (
+        <button type="submit">{contactFormButton.name}</button>
+      );
     }
     return (
       <section className="contact-form">

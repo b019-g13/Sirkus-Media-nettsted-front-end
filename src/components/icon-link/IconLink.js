@@ -15,7 +15,7 @@ class IconLink extends React.Component {
     }
     let iconLinkText = this.props["a_ext"];
     if (iconLinkText) {
-      iconLinkText = <a href="#">{iconLinkText}</a>;
+      iconLinkText = <a href={iconLinkText.value}>{iconLinkText.name}</a>;
     }
 
     return (

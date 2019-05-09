@@ -29,8 +29,8 @@ class Contact extends React.Component {
     let contactMapButton = this.props["a_ext"];
     if (contactMapButton) {
       contactMapButton = (
-        <a href="#" className="button">
-          {contactMapButton}
+        <a href={contactMapButton.value} className="button">
+          {contactMapButton.name}
         </a>
       );
     }
