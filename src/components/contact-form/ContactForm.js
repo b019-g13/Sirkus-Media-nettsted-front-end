@@ -55,7 +55,12 @@ class ContactForm extends React.Component {
       <section className="contact-form">
         {contactFormh2}
         <hr />
-        <form className="contact-us" action={contactFormAction} method="GET">
+        <form
+          id="kontakt"
+          className="contact-us"
+          action={contactFormAction}
+          method="GET"
+        >
           <section className="contact-us-sec">
             <div className="contact-us-sec-col">
               {contactFormName}
