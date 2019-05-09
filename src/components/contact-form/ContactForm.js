@@ -42,8 +42,11 @@ class ContactForm extends React.Component {
       }
     }
 
+    let contactFormAction = "";
     let contactFormButton = this.props["a_int"];
     if (contactFormButton) {
+      contactFormAction = contactFormButton.value;
+
       contactFormButton = (
         <button type="submit">{contactFormButton.name}</button>
       );
@@ -52,7 +55,7 @@ class ContactForm extends React.Component {
       <section className="contact-form">
         {contactFormh2}
         <hr />
-        <form className="contact-us">
+        <form className="contact-us" action={contactFormAction} method="GET">
           <section className="contact-us-sec">
             <div className="contact-us-sec-col">
               {contactFormName}
