@@ -1,8 +1,5 @@
 @import "../../variables.scss";
 
-$background-main: #2b91d9;
-$background-second: #2bd9cb;
-
 .contact-form {
   h2 {
     text-align: center;
@@ -12,7 +9,7 @@ $background-second: #2bd9cb;
     max-width: 80%;
     height: 1px;
     border: none;
-    background-color: lighten($background-second, 30%);
+    background-color: lighten($green, 30%);
   }
 
   .contact-us {
@@ -28,7 +25,7 @@ $background-second: #2bd9cb;
       border-radius: 4px;
     }
     input {
-      box-shadow: 7px 4px 20px -15px $background-main;
+      box-shadow: 7px 4px 20px -15px $blue;
 
       @media screen and (min-width: $size-m) {
         padding: 5px 10px;
@@ -49,19 +46,15 @@ $background-second: #2bd9cb;
       max-width: 10rem;
       color: white;
       text-transform: uppercase;
-      background-image: linear-gradient(
-        135deg,
-        $background-main,
-        $background-second
-      );
+      background-image: linear-gradient(135deg, $blue, $green);
       transition: 250ms all cubic-bezier(0.19, 1, 0.22, 1);
       transform: translateY(0px);
-      box-shadow: 0px 10px 30px -7px rgba($background-main, 0.5);
+      box-shadow: 0px 10px 30px -7px rgba($blue, 0.5);
 
       &:hover,
       &:focus {
         transform: translateY(-2px);
-        box-shadow: 0px 10px 30px -7px rgba($background-main, 0.75);
+        box-shadow: 0px 10px 30px -7px rgba($blue, 0.75);
       }
 
       &:active {
