@@ -56,7 +56,7 @@ class Page extends React.Component {
   };
 
   getPageComponents() {
-    Axios.get("https://api.b019-g13.group/api/v1/pages/" + this.props.page.id)
+    Axios.get("https://api.b019-g13.group/api/v1/pages/" + this.props.page.slug)
       .then(response => {
         const pageData = {
           id: response.data.id,

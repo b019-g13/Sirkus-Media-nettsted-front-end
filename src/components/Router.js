@@ -59,7 +59,7 @@ class Router extends React.Component {
                 <Route
                   key={i}
                   exact
-                  path={"/" + page.id}
+                  path={"/" + page.slug}
                   render={props => <PageComponent {...props} page={page} />}
                 />
               );

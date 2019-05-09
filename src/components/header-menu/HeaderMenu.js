@@ -96,7 +96,7 @@ class HeaderMenu extends React.Component {
           <div className="links">
             {menuLinks.map(function(links, i) {
               return (
-                <a href={links.page_id} key={i}>
+                <a href={links.value} key={i}>
                   {links.name}
                 </a>
               );
