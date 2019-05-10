@@ -38,6 +38,18 @@ h6 {
   font-family: "EB Garamond", serif;
 }
 
+h2 {
+  @media screen and (min-width: $size-s) {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  @media screen and (min-width: $size-s) {
+    font-size: 1.5em;
+  }
+}
+
 .layout-boxed {
   width: 100%;
   margin: 0 auto;
