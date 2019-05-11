@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.scss";
-import IconText from "../icon-text/IconText";
+import IconLink from "../icon-link/IconLink";
 
 class Header extends React.Component {
   componentWillMount() {
@@ -43,11 +43,11 @@ class Header extends React.Component {
       }
     }
 
-    let headerLeftIconText = null;
+    let headerLeftIconLink = null;
     this.state.children.map(child => {
-      if (child.type == IconText && headerLeftIconText == null) {
+      if (child.type == IconLink && headerLeftIconLink == null) {
         // Save component in variable
-        headerLeftIconText = <div className="contact-number">{child}</div>;
+        headerLeftIconLink = <div className="contact-number">{child}</div>;
 
         // Remove component from the children array
         const indexOfChild = this.state.children.indexOf(child);
@@ -75,7 +75,7 @@ class Header extends React.Component {
             {headerLeftButton}
             <section className="header-contact-info">
               {headerContactInfo1}
-              {headerLeftIconText}
+              {headerLeftIconLink}
             </section>
           </section>
           <section className="header-right">{headerRightImg}</section>

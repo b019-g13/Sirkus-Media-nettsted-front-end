@@ -108,17 +108,23 @@
       .contact-number {
         font-size: 1.2em;
 
-        .icon-text {
+        .icon-link {
           display: flex;
           align-items: baseline;
           padding: 0.5em 0 0 0.5em;
         }
-      }
 
-      .icon-text-icon {
-        padding-right: 0.5em;
-        img {
-          max-height: 20px;
+        .icon-link-text a {
+          color: currentColor;
+          text-decoration: none;
+        }
+
+        .icon-link-icon {
+          padding-right: 0.5em;
+
+          img {
+            max-height: 20px;
+          }
         }
       }
     }
