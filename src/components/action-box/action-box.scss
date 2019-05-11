@@ -1,8 +1,5 @@
 @import "../../variables.scss";
 
-$grey: #808080;
-$light-grey: #9baec8;
-
 .action-box {
   width: 100%;
   padding: 0 25px;
@@ -12,7 +9,7 @@ $light-grey: #9baec8;
   top: -3em;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px -10px $grey;
+  box-shadow: 0px 0px 20px -10px $color-gray-dark;
 
   @media screen and (min-width: $size-s) {
     top: -7em;
@@ -106,7 +103,7 @@ $light-grey: #9baec8;
       font-size: 1.8em;
       font-weight: 300;
       margin: 0;
-      color: $light-grey;
+      color: mix($color-gray-light, $color-gray-dark, 70%);
       word-spacing: -0.33em;
 
       @media screen and (min-width: $size-s) {
@@ -143,7 +140,7 @@ $light-grey: #9baec8;
       width: 100%;
       height: 1px;
       border: none;
-      background-color: $light-grey;
+      background-color: $color-gray-lighter;
       margin-top: 50px;
     }
 
@@ -173,7 +170,7 @@ $light-grey: #9baec8;
 
   .acplInformation {
     position: relative;
-    color: $grey;
+    color: mix($color-gray-dark, $color-gray-light, 30%);
     p {
       top: 0;
       position: absolute;
@@ -212,7 +209,7 @@ body.kontakt-oss {
     }
 
     input {
-      border: 1px solid $light-grey;
+      border: 1px solid $color-gray-light;
     }
 
     .contact-us-sec-col {

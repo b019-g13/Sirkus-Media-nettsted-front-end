@@ -1,21 +1,15 @@
 @import "../../variables.scss";
 
-$background-main: #454d5b;
-$background-second: #144364;
 $link-hover: rgb(212, 212, 212);
 
 .footer {
   width: 100%;
   background-image: linear-gradient(
     135deg,
-    $background-main,
-    $background-second
+    $color-gray-dark,
+    $color-gray-darker
   );
   color: white;
-
-  // @media screen and (min-width: $size-s) {
-  //   padding: 50px 0;
-  // }
 
   a {
     display: block;
