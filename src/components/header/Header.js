@@ -67,7 +67,7 @@ class Header extends React.Component {
     }
 
     return (
-      <header className="header">
+      <header id="innhold" className="header">
         <div className="header-inner layout-boxed">
           <section className="header-left">
             {headerLefth1}
