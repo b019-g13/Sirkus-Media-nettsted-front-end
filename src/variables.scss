@@ -12,6 +12,21 @@ $actionbox-s: 868px;
 $actionbox-xs: 740px;
 
 // Colors
-$light-grey: #f3f3f3;
-$blue: #2b91d9;
-$green: #2bd9cb;
+$color-gray-lightest: #f8f9fa;
+$color-gray-lighter: #d9e1e8;
+$color-gray-light: #9baec8;
+$color-gray-dark: #454d5b;
+$color-gray-darker: #282c37;
+$color-gray-darkest: #282c37;
+
+$color-primary: #2b91d9;
+$color-primary-light: #cbe4f5;
+$color-primary-dark: #144364;
+
+$color-secondary: #2bd9cb;
+$color-secondary-light: #caf5f2;
+$color-secondary-dark: #146761;
+
+$color-accent: #f89079;
+$color-accent-light: lighten($color-accent, 12%);
+$color-accent-dark: darken($color-accent, 30%);

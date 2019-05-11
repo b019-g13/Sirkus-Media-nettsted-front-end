@@ -9,7 +9,7 @@
     max-width: 80%;
     height: 1px;
     border: none;
-    background-color: lighten($green, 30%);
+    background-color: lighten($color-secondary, 30%);
   }
 
   .contact-us {
@@ -25,7 +25,7 @@
       border-radius: 4px;
     }
     input {
-      box-shadow: 7px 4px 20px -15px $blue;
+      box-shadow: 7px 4px 20px -15px $color-primary;
 
       @media screen and (min-width: $size-m) {
         padding: 5px 10px;
@@ -46,15 +46,19 @@
       max-width: 10rem;
       color: white;
       text-transform: uppercase;
-      background-image: linear-gradient(135deg, $blue, $green);
+      background-image: linear-gradient(
+        135deg,
+        $color-primary,
+        $color-secondary
+      );
       transition: 250ms all cubic-bezier(0.19, 1, 0.22, 1);
       transform: translateY(0px);
-      box-shadow: 0px 10px 30px -7px rgba($blue, 0.5);
+      box-shadow: 0px 10px 30px -7px rgba($color-primary, 0.5);
 
       &:hover,
       &:focus {
         transform: translateY(-2px);
-        box-shadow: 0px 10px 30px -7px rgba($blue, 0.75);
+        box-shadow: 0px 10px 30px -7px rgba($color-primary, 0.75);
       }
 
       &:active {
