@@ -55,25 +55,49 @@ class ContactForm extends React.Component {
       <section id="kontakt" className="contact-form">
         {contactFormh2}
         <hr />
-        <form className="contact-us" action={contactFormAction} method="GET">
+        <form className="contact-us" action={contactFormAction} method="POST">
           <section className="contact-us-sec">
             <div className="contact-us-sec-col">
               {contactFormName}
-              <input type="text" id="name" name="user_name" />
+              <input
+                type="text"
+                id="name"
+                name="navn"
+                required
+                autoComplete="name"
+              />
             </div>
             <div className="contact-us-sec-col">
               {contactFormCompanyname}
-              <input type="text" id="companyname" name="user_companyname" />
+              <input
+                type="text"
+                id="companyname"
+                name="selskap"
+                required
+                autoComplete="organization"
+              />
             </div>
           </section>
           <section className="contact-us-sec">
             <div className="contact-us-sec-col">
               {contactFormMail}
-              <input type="email" id="mail" name="user_mail" />
+              <input
+                type="email"
+                id="mail"
+                name="epost"
+                required
+                autoComplete="email"
+              />
             </div>
             <div className="contact-us-sec-col">
               {contactFormNumber}
-              <input type="text" id="number" name="user_number" />
+              <input
+                type="tel"
+                id="number"
+                name="telefon"
+                required
+                autoComplete="tel"
+              />
             </div>
           </section>
           {contactFormButton}
