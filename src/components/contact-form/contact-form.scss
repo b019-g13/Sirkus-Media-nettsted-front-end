@@ -3,6 +3,10 @@
 .contact-form {
   h2 {
     text-align: center;
+
+    @media screen and (min-width: $size-l) {
+      font-size: 2.25em;
+    }
   }
   hr {
     width: 100%;
