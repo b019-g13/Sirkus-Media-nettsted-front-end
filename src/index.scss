@@ -53,6 +53,19 @@ h3 {
   }
 }
 
+.jump-to-content {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  z-index: 1;
+  display: inline-block;
+  color: white;
+
+  &:focus {
+    top: 0;
+  }
+}
+
 .layout-boxed {
   width: 100%;
   margin: 0 auto;
