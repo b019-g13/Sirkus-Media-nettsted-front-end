@@ -20,7 +20,7 @@ class Process extends React.Component {
       processh2 = <h2>{processh2}</h2>;
     }
     return (
-      <section className="process">
+      <section id="var-prosess" className="process">
         <div className="process-inner layout-boxed">
           {processh2}
           {this.state.children.map(child => {
