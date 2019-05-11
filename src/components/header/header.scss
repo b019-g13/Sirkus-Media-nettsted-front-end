@@ -95,9 +95,10 @@ $accent: #f89079;
     .header-contact-info {
       display: flex;
       align-items: baseline;
+      flex-wrap: wrap;
 
       p {
-        padding-right: 8px;
+        padding: 8px 0 0 0;
       }
 
       .contact-number {
@@ -106,6 +107,7 @@ $accent: #f89079;
         .icon-text {
           display: flex;
           align-items: baseline;
+          padding: 0.5em 0 0 0.5em;
         }
       }
 
