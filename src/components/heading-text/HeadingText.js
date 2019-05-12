@@ -8,7 +8,9 @@ class headingText extends React.Component {
     }
     let headingTextText = this.props["p"];
     if (headingTextText) {
-      headingTextText = <p>{headingTextText}</p>;
+      headingTextText = (
+        <p dangerouslySetInnerHTML={{ __html: headingTextText }} />
+      );
     }
 
     return (
