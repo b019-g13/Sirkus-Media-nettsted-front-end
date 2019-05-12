@@ -134,6 +134,13 @@ class Page extends React.Component {
 
     document.body.classList.add(slug);
 
+    // Oppdater title
+    const documentTitle = document.querySelector("title");
+    documentTitle.textContent = documentTitle.textContent.replace(
+      documentTitle.textContent,
+      this.state.page.title + " - " + documentTitle.textContent
+    );
+
     // Looper igjennom komponentene til siden
     this.state.pageComponents.map((component, i) => {
       readyComponents.push(this.setupComponent(component, i));
