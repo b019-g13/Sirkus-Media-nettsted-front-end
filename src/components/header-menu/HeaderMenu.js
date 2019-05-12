@@ -93,7 +93,7 @@ class HeaderMenu extends React.Component {
             {iconOpen}
             {iconClose}
           </button>
-          <div className="links">
+          <div className="links" onClick={this.navToggle}>
             {menuLinks.map(function(links, i) {
               return (
                 <a href={links.value} key={i}>

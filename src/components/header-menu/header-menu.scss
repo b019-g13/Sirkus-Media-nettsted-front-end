@@ -133,6 +133,10 @@
     // Backdrop
     &::after {
       display: block;
+
+      @media screen and (min-width: $size-m) {
+        display: none;
+      }
     }
 
     .links {
