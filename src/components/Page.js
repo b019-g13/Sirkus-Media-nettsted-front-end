@@ -28,10 +28,12 @@ class Page extends React.Component {
       menus: [],
       readyMenus: {
         top: null
-      }
+      },
+      chat: false
     });
     this.getPageComponents();
     this.getMenus();
+    this.getSettings();
   }
 
   // Definerer alle komponenter
@@ -161,6 +163,16 @@ class Page extends React.Component {
       });
   }
 
+  getSettings() {
+    Axios.get("https://api.b019-g13.group/api/v1/site_settings/chat")
+      .then(response => {
+        this.setState({ chat: response.data.value });
+      })
+      .catch(() => {
+        console.error("Couldn't load chat");
+      });
+  }
+
   render() {
     // const top = this.state.readyMenus[1];
     // const condition = top != null;
@@ -182,6 +194,27 @@ class Page extends React.Component {
           return pageComponent;
         })}
         {/* <FooterMenu /> */}
+
+        {this.state.chat &&
+          (function(chat) {
+            if (!chat) {
+              return;
+            }
+
+            (function(id, src) {
+              if (document.getElementById(id)) {
+                return;
+              }
+              var js = document.createElement("script");
+              js.src = src;
+              js.type = "text/javascript";
+              js.setAttribute("async", "");
+              js.setAttribute("defer", "");
+              js.id = id;
+              var e = document.getElementsByTagName("script")[0];
+              e.parentNode.insertBefore(js, e);
+            })("chat-script", chat);
+          })(this.state.chat)}
       </React.Fragment>
     );
   }
