@@ -54,7 +54,7 @@ class Router extends React.Component {
             {this.state.pages.map(function(page, i) {
               return (
                 <Route
-                  key={i}
+                  key={page.slug}
                   exact
                   path={"/" + page.slug}
                   render={props => <PageComponent {...props} page={page} />}

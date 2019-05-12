@@ -102,9 +102,7 @@ class Page extends React.Component {
       }
 
       if (component.children == null) {
-        return (
-          <ReactComponent {...componentFields} key={i + "-" + component.id} />
-        );
+        return <ReactComponent {...componentFields} key={window.uuid()} />;
       } else {
         let componentChildren = [];
 
@@ -116,7 +114,7 @@ class Page extends React.Component {
           <ReactComponent
             {...componentFields}
             children={componentChildren}
-            key={i + "-" + component.id}
+            key={window.uuid()}
           />
         );
       }
