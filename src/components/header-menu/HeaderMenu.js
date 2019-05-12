@@ -34,10 +34,7 @@ class HeaderMenu extends React.Component {
         this.setState({ pageMenusLinks: response.data.links });
       })
       .catch(error => {
-        console.error("Menu handle error", error);
-      })
-      .then(() => {
-        console.log("Menu always executed", this.state);
+        console.error("Error", error);
       });
   }
 
