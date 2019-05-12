@@ -1,7 +1,7 @@
 import React from "react";
 import "./action-box.scss";
 
-class ActionBoxFrontPage extends React.Component {
+class ActionBox extends React.Component {
   componentWillMount() {
     this.setState({
       children: []
@@ -31,4 +31,4 @@ class ActionBoxFrontPage extends React.Component {
   }
 }
 
-export default ActionBoxFrontPage;
+export default ActionBox;
