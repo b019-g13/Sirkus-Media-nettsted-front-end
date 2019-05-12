@@ -30,13 +30,16 @@ ReactDOM.render(<Router />, document.getElementById("root"));
       openLiveChat();
 
       window.location.hash = "";
-    } else if (window.location.hash === "#var-prosess") {
+    } else if (
+      window.location.hash === "#var-prosess" ||
+      window.location.hash === "#kontakt"
+    ) {
       let attempts = 0;
-      let processElement = document.querySelector("#var-prosess");
+      let processElement = document.querySelector(window.location.hash);
 
       function findProcessElement() {
         setTimeout(function() {
-          processElement = document.querySelector("#var-prosess");
+          processElement = document.querySelector(window.location.hash);
 
           attempts++;
           if (processElement === null && attempts < 10) {
