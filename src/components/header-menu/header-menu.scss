@@ -51,7 +51,7 @@
   &-right a {
     color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
 
     &:hover {
       text-decoration: underline;
@@ -167,4 +167,8 @@
       display: none;
     }
   }
+}
+
+body.forside .nav-top .nav-top-right .links a:first-child {
+  display: none;
 }
