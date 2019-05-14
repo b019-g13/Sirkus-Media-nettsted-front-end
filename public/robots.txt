@@ -1,2 +1,3 @@
+Sitemap: https://sirkusmedia.b019-g13.group/sitemap.xml
 User-agent: *
 Disallow:
