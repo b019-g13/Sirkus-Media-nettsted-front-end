@@ -1,3 +1,4 @@
 /*
     X-Frame-Options: allow-from 'self' hubspot.com *.hubspot.com
     X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
