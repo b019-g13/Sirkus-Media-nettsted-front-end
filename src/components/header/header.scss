@@ -22,6 +22,8 @@
     border-radius: 4px;
     box-shadow: 0px 1.25em 1em -1em rgba($color-accent-dark, 0.25);
     text-align: center;
+    font-weight: 700;
+    text-shadow: none;
 
     @media screen and (min-width: $size-s) {
       white-space: nowrap;
