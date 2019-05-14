@@ -86,7 +86,11 @@ class HeaderMenu extends React.Component {
           </a>
         </section>
         <section className="nav-top-right">
-          <button id="nav-top-right-btn" onClick={this.navToggle}>
+          <button
+            id="nav-top-right-btn"
+            onClick={this.navToggle}
+            aria-label="Meny"
+          >
             {iconOpen}
             {iconClose}
           </button>
